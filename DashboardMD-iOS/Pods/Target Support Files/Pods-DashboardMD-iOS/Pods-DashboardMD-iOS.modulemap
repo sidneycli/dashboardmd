@@ -1,0 +1,6 @@
+framework module Pods_DashboardMD_iOS {
+  umbrella header "Pods-DashboardMD-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

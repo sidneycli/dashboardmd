@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF41DE568093A7A6BF961722 /* Pods_DashboardMD_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AE8E7527612F4B268B2231 /* Pods_DashboardMD_iOS.framework */; };
 		ED3A45C2214D96C70089C6B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A45C1214D96C70089C6B4 /* AppDelegate.swift */; };
 		ED3A45C4214D96C70089C6B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A45C3214D96C70089C6B4 /* ViewController.swift */; };
 		ED3A45C7214D96C70089C6B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED3A45C5214D96C70089C6B4 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46690136381D01FA8A3F3455 /* Pods-DashboardMD-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DashboardMD-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DashboardMD-iOS/Pods-DashboardMD-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		83AE8E7527612F4B268B2231 /* Pods_DashboardMD_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DashboardMD_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A3E87C6DC331BDE6005A69 /* Pods-DashboardMD-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DashboardMD-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DashboardMD-iOS/Pods-DashboardMD-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED3A45BE214D96C70089C6B4 /* DashboardMD-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DashboardMD-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3A45C1214D96C70089C6B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED3A45C3214D96C70089C6B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF41DE568093A7A6BF961722 /* Pods_DashboardMD_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430CA734594A01AFA43B2C5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7A3E87C6DC331BDE6005A69 /* Pods-DashboardMD-iOS.debug.xcconfig */,
+				46690136381D01FA8A3F3455 /* Pods-DashboardMD-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCBF5955B8D1A3521D86D4D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83AE8E7527612F4B268B2231 /* Pods_DashboardMD_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED3A45B5214D96C70089C6B4 = {
 			isa = PBXGroup;
 			children = (
 				ED3A45C0214D96C70089C6B4 /* DashboardMD-iOS */,
 				ED3A45BF214D96C70089C6B4 /* Products */,
+				430CA734594A01AFA43B2C5A /* Pods */,
+				BCBF5955B8D1A3521D86D4D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED3A45D0214D96CA0089C6B4 /* Build configuration list for PBXNativeTarget "DashboardMD-iOS" */;
 			buildPhases = (
+				496186DECC34B219CC029202 /* [CP] Check Pods Manifest.lock */,
 				ED3A45BA214D96C70089C6B4 /* Sources */,
 				ED3A45BB214D96C70089C6B4 /* Frameworks */,
 				ED3A45BC214D96C70089C6B4 /* Resources */,
+				2D085E6C2A030DCF904B0C04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D085E6C2A030DCF904B0C04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DashboardMD-iOS/Pods-DashboardMD-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDRecordButton/SDRecordButton.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDRecordButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DashboardMD-iOS/Pods-DashboardMD-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		496186DECC34B219CC029202 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DashboardMD-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED3A45BA214D96C70089C6B4 /* Sources */ = {
@@ -278,6 +355,7 @@
 		};
 		ED3A45D1214D96CA0089C6B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7A3E87C6DC331BDE6005A69 /* Pods-DashboardMD-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +374,7 @@
 		};
 		ED3A45D2214D96CA0089C6B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46690136381D01FA8A3F3455 /* Pods-DashboardMD-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
